@@ -95,25 +95,18 @@ class ChannelConfigurationViewController: UIViewController, UITextFieldDelegate 
     }
 
     func connectAsRole(role: String, connectAsUser: String) {
-        guard let channelNameValue = self.channelName.text?.trim(), !channelNameValue.isEmpty else {
-            let alertController = UIAlertController(title: "Missing Required Fields",
-                                                    message: "Channel name is required for WebRTC connection",
-                                                    preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alertController.addAction(okAction)
-
-            present(alertController, animated: true, completion: nil)
-            return
-        }
-        guard let awsRegionValue = self.regionName.text?.trim(), !awsRegionValue.isEmpty else {
-            let alertController = UIAlertController(title: "Missing Required Fields",
-                                                    message: "Region name is required for WebRTC connection",
-                                                    preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
-            return
-        }
+//        guard let channelNameValue = self.channelName.text?.trim(), !channelNameValue.isEmpty else {
+//            let alertController = UIAlertController(title: "Missing Required Fields",
+//                                                    message: "Videocall ID name is required!",
+//                                                    preferredStyle: .alert)
+//            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+//            alertController.addAction(okAction)
+//
+//            present(alertController, animated: true, completion: nil)
+//            return
+//        }
+        let channelNameValue = "CondorSC"
+        let awsRegionValue = "us-west-2"
 
         self.awsRegionType = awsRegionValue.aws_regionTypeValue()
         if (self.awsRegionType == .Unknown) {
