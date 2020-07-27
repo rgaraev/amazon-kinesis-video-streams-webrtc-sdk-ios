@@ -10,7 +10,6 @@
 		09A334F7CF9C0C1119A03FD1 /* Pods_AWSKinesisVideoWebRTCDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD3582AF09F7DF8A32F3158 /* Pods_AWSKinesisVideoWebRTCDemoApp.framework */; };
 		0EDCC9DCF16B4A433C5D1E3D /* Pods_AWSKinesisVideoWebRTCDemoApp_AWSKinesisVideoWebRTCDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D30E191AC50BE7D1397D45 /* Pods_AWSKinesisVideoWebRTCDemoApp_AWSKinesisVideoWebRTCDemoAppUITests.framework */; };
 		17FC2F801E258FC500174015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F7F1E258FC500174015 /* AppDelegate.swift */; };
-		17FC2F871E258FC500174015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F861E258FC500174015 /* Assets.xcassets */; };
 		17FC2F951E2590D800174015 /* MFAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FC2F941E2590D800174015 /* MFAViewController.xib */; };
 		17FC2F991E25940900174015 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F981E25940900174015 /* SignInViewController.swift */; };
 		17FC2F9B1E259E0500174015 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC2F9A1E259E0500174015 /* Constants.swift */; };
@@ -72,6 +71,7 @@
 		70BE4671235F800B00322E33 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE466E235F800B00322E33 /* Event.swift */; };
 		70BE46732360E58600322E33 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE46722360E58600322E33 /* VideoViewController.swift */; };
 		70BE46752360FC2F00322E33 /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE46742360FC2F00322E33 /* WebRTCClient.swift */; };
+		9510D70424CF253E00E447C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9510D70324CF253D00E447C3 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +107,6 @@
 /* Begin PBXFileReference section */
 		17FC2F7C1E258FC500174015 /* Condor IOS Native.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Condor IOS Native.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FC2F7F1E258FC500174015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17FC2F861E258FC500174015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17FC2F8B1E258FC500174015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17FC2F941E2590D800174015 /* MFAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MFAViewController.xib; sourceTree = "<group>"; };
 		17FC2F981E25940900174015 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +155,7 @@
 		70BE46742360FC2F00322E33 /* WebRTCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCClient.swift; sourceTree = "<group>"; };
 		70FAD51523983822002A50E6 /* AWSKinesisVideoWebRTCDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSKinesisVideoWebRTCDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FAD51923983822002A50E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9510D70324CF253D00E447C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B2AAC0ECA6F6883462E20EB2 /* Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests/Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BCD3582AF09F7DF8A32F3158 /* Pods_AWSKinesisVideoWebRTCDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSKinesisVideoWebRTCDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63D8021C88713E1A22AC928 /* Pods-AWSKinesisVideoWebRTCDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSKinesisVideoWebRTCDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-AWSKinesisVideoWebRTCDemoApp/Pods-AWSKinesisVideoWebRTCDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +222,7 @@
 		17FC2F7E1E258FC500174015 /* KVSiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				9510D70324CF253D00E447C3 /* Images.xcassets */,
 				709A549823624DED0039332B /* VideoViewController.xib */,
 				70BE466E235F800B00322E33 /* Event.swift */,
 				70BE466C235F800B00322E33 /* Message.swift */,
@@ -230,7 +231,6 @@
 				17FC2F941E2590D800174015 /* MFAViewController.xib */,
 				70BE46742360FC2F00322E33 /* WebRTCClient.swift */,
 				17FC2F7F1E258FC500174015 /* AppDelegate.swift */,
-				17FC2F861E258FC500174015 /* Assets.xcassets */,
 				17FC2F8B1E258FC500174015 /* Info.plist */,
 				17FC2F931E25909300174015 /* Supporting Files */,
 				708DC16D23550D4D00D7B98F /* LaunchScreen.storyboard */,
@@ -428,8 +428,8 @@
 			files = (
 				700199A8234FD06F00CFC1D0 /* Main.storyboard in Resources */,
 				708DC16E23550D4D00D7B98F /* LaunchScreen.storyboard in Resources */,
+				9510D70424CF253E00E447C3 /* Images.xcassets in Resources */,
 				70685CD2234FED1800D0562F /* awsconfiguration.json in Resources */,
-				17FC2F871E258FC500174015 /* Assets.xcassets in Resources */,
 				708FE977234CFBF800AD81DC /* kinesisLogo.png in Resources */,
 				709A549923624DED0039332B /* VideoViewController.xib in Resources */,
 				17FC2F951E2590D800174015 /* MFAViewController.xib in Resources */,
