@@ -48,4 +48,3 @@ let wssKey = "wss"
 
 let plusEncoding = "%2B"
 let equalsEncoding = "%3D"
-
