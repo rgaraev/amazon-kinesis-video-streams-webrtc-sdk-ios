@@ -3,48 +3,77 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-20@2x.png",
+=======
+      "filename" : "40.png",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-20@3x.png",
+=======
+      "filename" : "60.png",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-29@2x.png",
+=======
+      "filename" : "58.png",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-29@3x.png",
+=======
+      "filename" : "87.png",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-40@2x.png",
+=======
+      "filename" : "80.png",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-40@3x.png",
+=======
+      "filename" : "120.png",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-60@2x.png",
+=======
+      "filename" : "120-1.png",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-60@3x.png",
       "scale" : "3x"
     },
@@ -58,11 +87,25 @@
       "size" : "20x20",
       "idiom" : "ipad",
       "filename" : "condor.health square logo-20@2x.png",
+=======
+      "filename" : "180.png",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "20x20",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "20x20",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-29.png",
       "scale" : "1x"
     },
@@ -70,17 +113,30 @@
       "size" : "29x29",
       "idiom" : "ipad",
       "filename" : "condor.health square logo-29@2x.png",
+=======
+      "filename" : "29.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "29x29",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-40.png",
+=======
+      "filename" : "40-1.png",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-40@2x.png",
       "scale" : "2x"
     },
@@ -100,12 +156,34 @@
       "size" : "83.5x83.5",
       "idiom" : "ipad",
       "filename" : "condor.health square logo-83.5@2x.png",
+=======
+      "filename" : "80-1.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "76x76",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "76x76",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "83.5x83.5",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "2x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
+<<<<<<< HEAD
       "filename" : "condor.health square logo-1024.png",
+=======
+      "filename" : "1024.png",
+>>>>>>> parent of 5a4fb22... simple variant
       "scale" : "1x"
     }
   ],
