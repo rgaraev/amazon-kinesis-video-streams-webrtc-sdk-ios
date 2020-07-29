@@ -40,6 +40,9 @@ class ChannelConfigurationViewController: UIViewController, UITextFieldDelegate 
     
     var peerConnection: RTCPeerConnection?
 
+
+    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         self.signalingConnected = false
