@@ -73,6 +73,7 @@
 		70BE46752360FC2F00322E33 /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE46742360FC2F00322E33 /* WebRTCClient.swift */; };
 		9510D70424CF253E00E447C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9510D70324CF253D00E447C3 /* Images.xcassets */; };
 		95BB3EA424D1C72C00A79A8D /* WorkoutsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB3EA324D1C72C00A79A8D /* WorkoutsListViewController.swift */; };
+		D66A00F924D2A14B000853A9 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00F824D2A14B000853A9 /* WorkoutTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		95BB3EA324D1C72C00A79A8D /* WorkoutsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsListViewController.swift; sourceTree = "<group>"; };
 		B2AAC0ECA6F6883462E20EB2 /* Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests/Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BCD3582AF09F7DF8A32F3158 /* Pods_AWSKinesisVideoWebRTCDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSKinesisVideoWebRTCDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66A00F824D2A14B000853A9 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		F63D8021C88713E1A22AC928 /* Pods-AWSKinesisVideoWebRTCDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSKinesisVideoWebRTCDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-AWSKinesisVideoWebRTCDemoApp/Pods-AWSKinesisVideoWebRTCDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,6 +249,7 @@
 				17FC2FA21E25A5D000174015 /* ConfirmForgotPasswordViewController.swift */,
 				70B6B7E5235654BD006F9118 /* KVSSigner.swift */,
 				95BB3EA324D1C72C00A79A8D /* WorkoutsListViewController.swift */,
+				D66A00F824D2A14B000853A9 /* WorkoutTableViewCell.swift */,
 			);
 			path = KVSiOSApp;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				17FC2FA31E25A5D000174015 /* ConfirmForgotPasswordViewController.swift in Sources */,
 				70685CD0234FD66900D0562F /* ChannelConfigurationViewController.swift in Sources */,
 				70B6B7E6235654BD006F9118 /* KVSSigner.swift in Sources */,
+				D66A00F924D2A14B000853A9 /* WorkoutTableViewCell.swift in Sources */,
 				70BE4671235F800B00322E33 /* Event.swift in Sources */,
 				17FC2FA11E25A25900174015 /* ForgotPasswordViewController.swift in Sources */,
 				17FC2F9D1E259E5D00174015 /* SignUpViewController.swift in Sources */,
@@ -794,6 +798,21 @@
 					"<Multiple",
 					"values>",
 					"$(SRCROOT)/Pods",
+					"@\b${inherited}",
+					"${BUILD_PRODUCT_DIR}",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSAuthCore/AWSAuthCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCore/AWSCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSKinesisVideo/AWSKinesisVideo.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSKinesisVideoSignaling/AWSKinesisVideoSignaling.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSMobileClient/AWSMobileClient.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CommonCryptoModule/CommonCryptoModule.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Starscream/Starscream.framework/Headers\"",
+					"${SRCROOT}/Pods",
 				);
 				INFOPLIST_FILE = KVSiOSApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
