@@ -592,7 +592,7 @@
         <scene sceneID="9jy-65-1RI">
             <objects>
                 <navigationController id="rmy-nG-EJs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" id="jMy-OG-PuS"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="account_tab_icon" id="jMy-OG-PuS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yGT-KS-y3b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -626,6 +626,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="account_tab_icon" width="66.666664123535156" height="66.666664123535156"/>
         <image name="activity_tab_icon" width="40" height="40"/>
         <image name="messenger_tab_icon" width="40" height="40"/>
         <image name="workouts_tab_icon" width="40" height="40"/>
