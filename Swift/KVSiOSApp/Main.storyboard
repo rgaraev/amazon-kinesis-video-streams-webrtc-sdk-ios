@@ -91,12 +91,71 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fxY-gB-7Yj" kind="relationship" relationship="rootViewController" id="GDD-9N-HJz"/>
+                        <segue destination="FtJ-19-ktJ" kind="relationship" relationship="rootViewController" id="yBb-08-IDw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5x-LH-KDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3393" y="1845"/>
+        </scene>
+        <!--Messenger-->
+        <scene sceneID="ozf-P5-kOZ">
+            <objects>
+                <tableViewController title="Messenger" id="FtJ-19-ktJ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="JRm-o9-3n1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Connect to the doctor" id="55w-Bz-n7p">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Uy7-Zl-Vmo" style="IBUITableViewCellStyleDefault" id="nBQ-VB-szV">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="1.1920928955078125e-07"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nBQ-VB-szV" id="Fom-8p-W8y">
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="1.1920928955078125e-07"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="VideoCall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uy7-Zl-Vmo">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="1.1920928955078125e-07"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dxE-zf-rQ1" style="IBUITableViewCellStyleDefault" id="FFg-SX-pLs">
+                                        <rect key="frame" x="0.0" y="55.50000011920929" width="375" height="1.1920928955078125e-07"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FFg-SX-pLs" id="GjV-9O-vcN">
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="1.1920928955078125e-07"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Text chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dxE-zf-rQ1">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="1.1920928955078125e-07"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="FtJ-19-ktJ" id="DJG-xa-SkJ"/>
+                            <outlet property="delegate" destination="FtJ-19-ktJ" id="nUm-Al-cMv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Messenger" id="3Br-oB-u2k"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cre-gV-uP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2487" y="1843"/>
         </scene>
         <!--Messenger-->
         <scene sceneID="Of1-Bu-MjB">
@@ -111,7 +170,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="4pf-3f-52M">
-                                <rect key="frame" x="66" y="74" width="250" height="428.5"/>
+                                <rect key="frame" x="66" y="30" width="250" height="428.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Channel Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEP-tC-ik7">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="25"/>
@@ -233,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NB-jG-Ywn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2692" y="1845"/>
+            <point key="canvasLocation" x="-1572" y="1845"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="lK3-Rv-4a7">
@@ -293,13 +352,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HhB-z4-sWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2042" y="1845"/>
+            <point key="canvasLocation" x="-922" y="1845"/>
         </scene>
         <!--Account-->
         <scene sceneID="CBP-hP-jfm">
             <objects>
-                <tableViewController id="I8H-n5-b0E" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hDZ-gH-Pcz">
+                <tableViewController id="I8H-n5-b0E" customClass="AccountViewController" customModule="Condor_IOS_Native" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hDZ-gH-Pcz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -324,7 +383,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="FyB-t4-Mhc" kind="presentation" id="jiQ-AJ-bxt"/>
+                                            <segue destination="FyB-t4-Mhc" kind="show" id="jiQ-AJ-bxt"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -433,6 +492,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Account" id="Rp0-xK-xBw"/>
+                    <connections>
+                        <outlet property="userEmailLabel" destination="YV9-GU-pdP" id="mqf-69-DhK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYd-8a-nRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -471,28 +533,35 @@
             </objects>
             <point key="canvasLocation" x="-1906.4000000000001" y="2570.4647676161921"/>
         </scene>
-        <!--View Controller-->
+        <!--Email Settings View Controller-->
         <scene sceneID="s31-23-eB6">
             <objects>
-                <viewController id="FyB-t4-Mhc" sceneMemberID="viewController">
+                <viewController id="FyB-t4-Mhc" customClass="EmailSettingsViewController" customModule="Condor_IOS_Native" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="okF-aU-urV"/>
                         <viewControllerLayoutGuide type="bottom" id="jCf-t4-mOA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6TO-Ap-V9C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email if you want to backup your data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um2-UK-TpG">
-                                <rect key="frame" x="20" y="47" width="335" height="41"/>
+                                <rect key="frame" x="20" y="91" width="335" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6b-Qq-Ky6">
-                                <rect key="frame" x="87.5" y="138" width="200" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kub-HD-pKi">
+                                <rect key="frame" x="170.5" y="286" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveEmail" destination="FyB-t4-Mhc" eventType="touchUpInside" id="OMk-WH-UT1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cwa-au-784">
+                                <rect key="frame" x="87.5" y="176" width="200" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="dmi-TN-R3W"/>
+                                    <constraint firstAttribute="width" constant="200" id="avx-aB-ROq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -501,14 +570,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="um2-UK-TpG" firstAttribute="centerX" secondItem="6TO-Ap-V9C" secondAttribute="centerX" id="G5e-IR-zEt"/>
-                            <constraint firstItem="d6b-Qq-Ky6" firstAttribute="centerX" secondItem="um2-UK-TpG" secondAttribute="centerX" id="Ib6-H9-1J0"/>
+                            <constraint firstItem="Cwa-au-784" firstAttribute="centerX" secondItem="um2-UK-TpG" secondAttribute="centerX" id="HAd-9r-QKK"/>
+                            <constraint firstItem="kub-HD-pKi" firstAttribute="top" secondItem="Cwa-au-784" secondAttribute="bottom" constant="76" id="JfJ-vN-nsf"/>
                             <constraint firstAttribute="trailing" secondItem="um2-UK-TpG" secondAttribute="trailing" constant="20" id="Vg2-SN-sBH"/>
-                            <constraint firstItem="d6b-Qq-Ky6" firstAttribute="top" secondItem="um2-UK-TpG" secondAttribute="bottom" constant="50" id="gJ5-GS-7LA"/>
                             <constraint firstItem="um2-UK-TpG" firstAttribute="top" secondItem="okF-aU-urV" secondAttribute="bottom" constant="47" id="iox-PJ-1MY"/>
+                            <constraint firstItem="Cwa-au-784" firstAttribute="top" secondItem="um2-UK-TpG" secondAttribute="bottom" constant="44" id="kkr-w0-G7G"/>
+                            <constraint firstItem="Cwa-au-784" firstAttribute="centerX" secondItem="kub-HD-pKi" secondAttribute="centerX" id="s2u-aG-l3C"/>
                             <constraint firstItem="um2-UK-TpG" firstAttribute="leading" secondItem="6TO-Ap-V9C" secondAttribute="leading" constant="20" id="te3-Cm-d4l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6ov-hQ-tvS"/>
+                    <connections>
+                        <outlet property="EmailText" destination="Cwa-au-784" id="oJU-QS-GY6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LQ-s7-j7S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
