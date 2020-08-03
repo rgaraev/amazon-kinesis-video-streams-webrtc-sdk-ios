@@ -1,0 +1,56 @@
+{
+    "api": {
+        "plugins": {
+            "awsAPIPlugin": {
+                "condorai": {
+                    "endpointType": "GraphQL",
+                    "endpoint": "https://kyvkeh4xavhhnpfnx45hfdymlq.appsync-api.us-west-2.amazonaws.com/graphql",
+                    "region": "us-west-2",
+                    "authorizationType": "API_KEY",
+                    "apiKey": "da2-jrgvugdlsraorjcz4nc74vljhy"
+                }
+            }
+        }
+    },
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "UserAgent": "aws-amplify/cli",
+                "Version": "0.1.0",
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "AppSync": {
+                    "Default": {
+                        "ApiUrl": "https://kyvkeh4xavhhnpfnx45hfdymlq.appsync-api.us-west-2.amazonaws.com/graphql",
+                        "Region": "us-west-2",
+                        "AuthMode": "API_KEY",
+                        "ApiKey": "da2-jrgvugdlsraorjcz4nc74vljhy",
+                        "ClientDatabasePrefix": "condorai_API_KEY"
+                    }
+                },
+                "CredentialsProvider": {
+                    "CognitoIdentity": {
+                        "Default": {
+                            "PoolId": "us-west-2:7339df11-7f3a-4d91-953c-af3a9aa23082",
+                            "Region": "us-west-2"
+                        }
+                    }
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "us-west-2_xeRNSjWUd",
+                        "AppClientId": "3oonp4252vfv789di1gh6btoou",
+                        "AppClientSecret": "1j4b4duiffh322fe2975j8a4c3kmnciuu75897ns1n5qqrfgrhbp",
+                        "Region": "us-west-2"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "authenticationFlowType": "USER_SRP_AUTH"
+                    }
+                }
+            }
+        }
+    }
+}

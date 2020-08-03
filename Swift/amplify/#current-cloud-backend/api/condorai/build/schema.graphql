@@ -1,0 +1,158 @@
+type Training {
+  id: ID!
+  name: String!
+  description: String
+  videoLink: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelTrainingConnection {
+  items: [Training]
+  nextToken: String
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+input ModelTrainingFilterInput {
+  id: ModelIDInput
+  name: ModelStringInput
+  description: ModelStringInput
+  videoLink: ModelStringInput
+  and: [ModelTrainingFilterInput]
+  or: [ModelTrainingFilterInput]
+  not: ModelTrainingFilterInput
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+type Query {
+  getTraining(id: ID!): Training
+  listTrainings(filter: ModelTrainingFilterInput, limit: Int, nextToken: String): ModelTrainingConnection
+}
+
+input CreateTrainingInput {
+  id: ID
+  name: String!
+  description: String
+  videoLink: String
+}
+
+input UpdateTrainingInput {
+  id: ID!
+  name: String
+  description: String
+  videoLink: String
+}
+
+input DeleteTrainingInput {
+  id: ID
+}
+
+type Mutation {
+  createTraining(input: CreateTrainingInput!, condition: ModelTrainingConditionInput): Training
+  updateTraining(input: UpdateTrainingInput!, condition: ModelTrainingConditionInput): Training
+  deleteTraining(input: DeleteTrainingInput!, condition: ModelTrainingConditionInput): Training
+}
+
+input ModelTrainingConditionInput {
+  name: ModelStringInput
+  description: ModelStringInput
+  videoLink: ModelStringInput
+  and: [ModelTrainingConditionInput]
+  or: [ModelTrainingConditionInput]
+  not: ModelTrainingConditionInput
+}
+
+type Subscription {
+  onCreateTraining: Training @aws_subscribe(mutations: ["createTraining"])
+  onUpdateTraining: Training @aws_subscribe(mutations: ["updateTraining"])
+  onDeleteTraining: Training @aws_subscribe(mutations: ["deleteTraining"])
+}

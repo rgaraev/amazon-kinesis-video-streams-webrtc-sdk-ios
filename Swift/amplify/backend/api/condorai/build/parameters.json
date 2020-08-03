@@ -1,0 +1,8 @@
+{
+    "CreateAPIKey": 1,
+    "AppSyncApiName": "condorai",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "S3DeploymentBucket": "amplify-condorai-dev-135328-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/cca817a3b33a6652c3deb9b094da403b43e91027"
+}

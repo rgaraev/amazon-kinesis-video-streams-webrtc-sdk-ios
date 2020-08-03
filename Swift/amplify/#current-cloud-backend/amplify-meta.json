@@ -1,0 +1,79 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-condorai-dev-135328-authRole",
+			"UnauthRoleArn": "arn:aws:iam::885351798364:role/amplify-condorai-dev-135328-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::885351798364:role/amplify-condorai-dev-135328-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "amplify-condorai-dev-135328-deployment",
+			"UnauthRoleName": "amplify-condorai-dev-135328-unauthRole",
+			"StackName": "amplify-condorai-dev-135328",
+			"StackId": "arn:aws:cloudformation:us-west-2:885351798364:stack/amplify-condorai-dev-135328/f26cd500-babf-11ea-986c-02e60452d3a4",
+			"AmplifyAppId": "d2eagahuvo12d9"
+		}
+	},
+	"api": {
+		"condorai": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "demo",
+							"apiKeyExpirationDays": "365"
+						}
+					}
+				},
+				"GraphQLAPIIdOutput": "v5peupybx5cuvakssrvj4ydgeu",
+				"GraphQLAPIEndpointOutput": "https://kyvkeh4xavhhnpfnx45hfdymlq.appsync-api.us-west-2.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-jrgvugdlsraorjcz4nc74vljhy"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-condorai-dev-135328-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apicondorai"
+			},
+			"lastPushTimeStamp": "2020-07-07T15:54:11.864Z",
+			"lastPushDirHash": "HeaAhgjUz4URVX/wFx0feJ72XsY="
+		}
+	},
+	"auth": {
+		"condoraie19f3043": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false,
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-condorai-dev-135328-deployment/amplify-cfn-templates/auth/condoraie19f3043-cloudformation-template.yml",
+				"logicalId": "authcondoraie19f3043"
+			},
+			"lastPushTimeStamp": "2020-07-07T15:54:08.811Z",
+			"output": {
+				"AppClientSecret": "1j4b4duiffh322fe2975j8a4c3kmnciuu75897ns1n5qqrfgrhbp",
+				"UserPoolId": "us-west-2_xeRNSjWUd",
+				"AppClientIDWeb": "4576rlu9poqv8sq3oo8d9dgkti",
+				"AppClientID": "3oonp4252vfv789di1gh6btoou",
+				"IdentityPoolId": "us-west-2:7339df11-7f3a-4d91-953c-af3a9aa23082",
+				"IdentityPoolName": "condoraie19f3043_identitypool_e19f3043__dev",
+				"UserPoolName": "condoraie19f3043_userpool_e19f3043"
+			},
+			"lastPushDirHash": "zg+DRbqDswL0ZpGwFGuTW4JFWgo="
+		}
+	},
+	"hosting": {
+		"amplifyhosting": {
+			"service": "amplifyhosting",
+			"providerPlugin": "awscloudformation",
+			"type": "manual",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-condorai-dev-135328-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+				"logicalId": "hostingamplifyhosting"
+			},
+			"lastPushTimeStamp": "2020-07-07T15:54:08.813Z",
+			"output": {},
+			"lastPushDirHash": "/+VZ33seFFqAr6wbtptwbINUfSA="
+		}
+	}
+}
