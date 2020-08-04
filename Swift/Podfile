@@ -3,6 +3,7 @@ platform :ios, '11.0'
 use_frameworks!
 
 target 'AWSKinesisVideoWebRTCDemoApp' do
+  pod 'YoutubeDirectLinkExtractor'
   pod 'AWSCognitoIdentityProvider'
   pod 'AWSMobileClient'
   pod 'CommonCryptoModule'

@@ -15,7 +15,8 @@ class AccountViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
-        let userEmail = UserDefaults.standard.string(forKey: "userEmail");         userEmailLabel.text = (userEmail != nil) ? userEmail : "Not set";
+        let userEmail = UserDefaults.standard.string(forKey: "userEmail");
+        userEmailLabel.text = (userEmail != nil) ? userEmail : "Not set";
     }
     
 }

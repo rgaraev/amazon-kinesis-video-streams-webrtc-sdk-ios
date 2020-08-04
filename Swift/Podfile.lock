@@ -16,6 +16,7 @@ PODS:
   - CommonCryptoModule (1.0.2)
   - GoogleWebRTC (1.1.29400)
   - Starscream (3.1.1)
+  - YoutubeDirectLinkExtractor (0.3.1)
 
 DEPENDENCIES:
   - AWSCognitoIdentityProvider
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - CommonCryptoModule
   - GoogleWebRTC (~> 1.1)
   - Starscream (~> 3.0)
+  - YoutubeDirectLinkExtractor
 
 SPEC REPOS:
   trunk:
@@ -38,6 +40,7 @@ SPEC REPOS:
     - CommonCryptoModule
     - GoogleWebRTC
     - Starscream
+    - YoutubeDirectLinkExtractor
 
 SPEC CHECKSUMS:
   AWSAuthCore: 284f1bc07187fad68ba52a0af088fe84f7af538e
@@ -50,7 +53,8 @@ SPEC CHECKSUMS:
   CommonCryptoModule: 63a68b57abed79655b3a01011419bf037a05b0a0
   GoogleWebRTC: cfb83bc346435a17fe06bb05f04ad826b858a7fb
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  YoutubeDirectLinkExtractor: de7abd36c0e3bb120b9b372f36450fbf9b51c01e
 
-PODFILE CHECKSUM: cfdf7eab96fdee077722a067437f67ed84ac4fb9
+PODFILE CHECKSUM: e56c38cb18cc442568212ee9f23d7f1c14bf0c5e
 
 COCOAPODS: 1.9.3

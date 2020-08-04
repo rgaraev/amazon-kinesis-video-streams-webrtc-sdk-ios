@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="I8c-ad-NJv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EUc-4j-5hN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -29,16 +29,12 @@
         <scene sceneID="5uL-3n-vPm">
             <objects>
                 <tabBarController id="C8E-RS-gnM" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DYL-7X-Nz3">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="DYL-7X-Nz3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="dJZ-sn-Ti4" kind="relationship" relationship="viewControllers" id="bSC-hb-hrZ"/>
                         <segue destination="5RH-t2-SkA" kind="relationship" relationship="viewControllers" id="YJo-ol-Ogl"/>
@@ -53,19 +49,31 @@
         <!--Workouts-->
         <scene sceneID="eAf-1g-Izu">
             <objects>
-                <tableViewController id="p0x-gM-Nc5" sceneMemberID="viewController">
+                <tableViewController id="p0x-gM-Nc5" customClass="WorkoutsListViewController" customModule="AWSKinesisVideoWebRTCDemoAppUITests" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="62u-oR-ql3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" id="b0X-Zl-dZJ" customClass="WorkoutTableViewCell" customModule="Condor_IOS_Native">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" textLabel="hAH-kX-9GV" rowHeight="72" style="IBUITableViewCellStyleDefault" id="b0X-Zl-dZJ" customClass="WorkoutTableViewCell" customModule="AWSKinesisVideoWebRTCDemoAppUITests" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b0X-Zl-dZJ" id="q9b-l1-CKy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAH-kX-9GV">
+                                            <rect key="frame" x="16" y="0.0" width="324" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="eqD-qT-RQf" kind="showDetail" id="QAx-Cn-sb9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -78,6 +86,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLv-ch-TVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2463.1999999999998" y="1123.9880059970017"/>
+        </scene>
+        <!--Workout Player View Controller-->
+        <scene sceneID="sZL-Sc-IXq">
+            <objects>
+                <viewController id="eqD-qT-RQf" customClass="WorkoutPlayerViewController" customModule="AWSKinesisVideoWebRTCDemoAppUITests" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bQY-bk-tvZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="DeR-rz-1l0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Brr-Qd-Exu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xX6-kB-LGS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwu-Wv-9QS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1759" y="1127"/>
         </scene>
         <!--Messenger-->
         <scene sceneID="2qy-He-T0D">
@@ -103,21 +130,21 @@
             <objects>
                 <tableViewController title="Messenger" id="FtJ-19-ktJ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="JRm-o9-3n1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
                             <tableViewSection headerTitle="Connect to the doctor" id="55w-Bz-n7p">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Uy7-Zl-Vmo" style="IBUITableViewCellStyleDefault" id="nBQ-VB-szV">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="1.1920928955078125e-07"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Uy7-Zl-Vmo" rowHeight="90" style="IBUITableViewCellStyleDefault" id="nBQ-VB-szV">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nBQ-VB-szV" id="Fom-8p-W8y">
-                                            <rect key="frame" x="0.0" y="0.0" width="348" height="1.1920928955078125e-07"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="VideoCall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uy7-Zl-Vmo">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="1.1920928955078125e-07"/>
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="90"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -125,16 +152,19 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fxY-gB-7Yj" kind="show" id="8Hs-0B-HBq"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dxE-zf-rQ1" style="IBUITableViewCellStyleDefault" id="FFg-SX-pLs">
-                                        <rect key="frame" x="0.0" y="55.50000011920929" width="375" height="1.1920928955078125e-07"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dxE-zf-rQ1" rowHeight="56" style="IBUITableViewCellStyleDefault" id="FFg-SX-pLs">
+                                        <rect key="frame" x="0.0" y="145.5" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FFg-SX-pLs" id="GjV-9O-vcN">
-                                            <rect key="frame" x="0.0" y="0.0" width="348" height="1.1920928955078125e-07"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Text chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dxE-zf-rQ1">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="1.1920928955078125e-07"/>
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="56"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -155,7 +185,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cre-gV-uP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2487" y="1843"/>
+            <point key="canvasLocation" x="-2487.1999999999998" y="1842.7286356821592"/>
         </scene>
         <!--Messenger-->
         <scene sceneID="Of1-Bu-MjB">
@@ -166,11 +196,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xzu-VI-sNV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PaL-Mo-bUW" customClass="zz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="4pf-3f-52M">
-                                <rect key="frame" x="66" y="30" width="250" height="428.5"/>
+                                <rect key="frame" x="66" y="74" width="250" height="428.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Channel Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEP-tC-ik7">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="25"/>
@@ -357,9 +387,9 @@
         <!--Account-->
         <scene sceneID="CBP-hP-jfm">
             <objects>
-                <tableViewController id="I8H-n5-b0E" customClass="AccountViewController" customModule="Condor_IOS_Native" sceneMemberID="viewController">
+                <tableViewController id="I8H-n5-b0E" customClass="AccountViewController" customModule="AWSKinesisVideoWebRTCDemoAppUITests" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hDZ-gH-Pcz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -493,7 +523,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Account" id="Rp0-xK-xBw"/>
                     <connections>
-                        <outlet property="userEmailLabel" destination="YV9-GU-pdP" id="mqf-69-DhK"/>
+                        <outlet property="userEmailLabel" destination="YV9-GU-pdP" id="FMW-Pc-Tqy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYd-8a-nRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -509,11 +539,11 @@
                         <viewControllerLayoutGuide type="bottom" id="y0j-6L-MGu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xD7-Pc-Lo2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask your doctor to send you an invite link via &quot;Condor AI&quot;" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fK-aa-27C">
-                                <rect key="frame" x="16" y="313" width="343" height="41"/>
+                                <rect key="frame" x="16" y="288.5" width="343" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -536,13 +566,13 @@
         <!--Email Settings View Controller-->
         <scene sceneID="s31-23-eB6">
             <objects>
-                <viewController id="FyB-t4-Mhc" customClass="EmailSettingsViewController" customModule="Condor_IOS_Native" sceneMemberID="viewController">
+                <viewController id="FyB-t4-Mhc" customClass="EmailSettingsViewController" customModule="AWSKinesisVideoWebRTCDemoAppUITests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="okF-aU-urV"/>
                         <viewControllerLayoutGuide type="bottom" id="jCf-t4-mOA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6TO-Ap-V9C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email if you want to backup your data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um2-UK-TpG">
@@ -626,7 +656,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="account_tab_icon" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="account_tab_icon" width="29" height="29"/>
         <image name="activity_tab_icon" width="40" height="40"/>
         <image name="messenger_tab_icon" width="40" height="40"/>
         <image name="workouts_tab_icon" width="40" height="40"/>
