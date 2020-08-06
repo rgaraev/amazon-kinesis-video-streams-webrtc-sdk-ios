@@ -38,6 +38,7 @@ class VideoViewController: UIViewController {
         #if arch(arm64)
         // Using metal (arm64 only)
         let localRenderer = RTCMTLVideoView(frame: localVideoView?.frame ?? CGRect.zero)
+        localRenderer.transform = CGAffineTransform(scaleX: -1, y: 1);
         let remoteRenderer = RTCMTLVideoView(frame: view.frame)
         localRenderer.videoContentMode = .scaleAspectFill
         remoteRenderer.videoContentMode = .scaleAspectFill

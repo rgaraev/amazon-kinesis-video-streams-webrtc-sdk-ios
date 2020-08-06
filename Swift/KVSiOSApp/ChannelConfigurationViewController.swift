@@ -6,7 +6,7 @@ import AWSMobileClient
 import Foundation
 import WebRTC
 
-class ChannelConfigurationViewController: UIViewController, UITextFieldDelegate {
+class ChannelConfigurationViewController: UIViewController {
 
     var userListDevicesResponse: AWSCognitoIdentityUserListDevicesResponse?
     var user: AWSCognitoIdentityUser?
@@ -28,14 +28,6 @@ class ChannelConfigurationViewController: UIViewController, UITextFieldDelegate 
     lazy var localSenderId: String = {
         return connectAsViewClientId
     }()
-
-    @IBOutlet var connectedLabel: UILabel!
-    @IBOutlet var channelName: UITextField!
-    @IBOutlet var clientID: UITextField!
-    @IBOutlet var regionName: UITextField!
-    @IBOutlet var isAudioEnabled: UISwitch!
-
-    @IBOutlet weak var connectAsMasterButton: UIButton!
     @IBOutlet weak var connectAsViewerButton: UIButton!
     
     var peerConnection: RTCPeerConnection?
@@ -46,16 +38,40 @@ class ChannelConfigurationViewController: UIViewController, UITextFieldDelegate 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         self.signalingConnected = false
-        updateConnectionLabel()
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.signalingConnected = false
-        updateConnectionLabel()
+            let serviceConfiguration = AWSServiceConfiguration(region: cognitoIdentityUserPoolRegion, credentialsProvider: nil)
 
-        channelName.delegate = self
-        clientID.delegate = self
-        regionName.delegate = self
+            // create pool configuration
+            let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: cognitoIdentityUserPoolAppClientId,
+            clientSecret: cognitoIdentityUserPoolAppClientSecret,
+            poolId: cognitoIdentityUserPoolId)
+
+            // initialize user pool client
+            AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: awsCognitoUserPoolsSignInProviderKey)
+
+            AWSMobileClient.default().initialize { (userState, error) in
+            if let error = error {
+            print("error: \(error.localizedDescription)")
+
+            return
+            }
+
+            guard let userState = userState else {
+            return
+            }
+            print("The user is \(userState.rawValue).")
+            switch userState {
+                default:
+                    AWSMobileClient.default().signIn(username: "garaev", password: "Aws$1garaev") { (signInResult, error) in
+                        print("signInResult: ", signInResult)
+                        print("error: ", error)
+                    }
+                }
+            }
     }
 
     func textFieldShouldReturn(_: UITextField) -> Bool {
@@ -91,48 +107,14 @@ class ChannelConfigurationViewController: UIViewController, UITextFieldDelegate 
         connectAsRole(role: masterRole, connectAsUser: (connectAsMasterKey))
     }
 
-    @IBAction func signOut(_ sender: AnyObject) {
-        AWSMobileClient.default().signOut()
-        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        self.present((mainStoryBoard.instantiateViewController(withIdentifier: "signinController") as? UINavigationController)!, animated: true, completion: nil)
-    }
+    
 
     func connectAsRole(role: String, connectAsUser: String) {
-        guard let channelNameValue = self.channelName.text?.trim(), !channelNameValue.isEmpty else {
-            let alertController = UIAlertController(title: "Missing Required Fields",
-                                                    message: "Channel name is required for WebRTC connection",
-                                                    preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alertController.addAction(okAction)
-
-            present(alertController, animated: true, completion: nil)
-            return
-        }
-        guard let awsRegionValue = self.regionName.text?.trim(), !awsRegionValue.isEmpty else {
-            let alertController = UIAlertController(title: "Missing Required Fields",
-                                                    message: "Region name is required for WebRTC connection",
-                                                    preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
-            return
-        }
-
+        let channelNameValue = "CondorSC"
+        let awsRegionValue = "us-west-2"
         self.awsRegionType = awsRegionValue.aws_regionTypeValue()
-        if (self.awsRegionType == .Unknown) {
-            let alertController = UIAlertController(title: "Invalid Region Field",
-                                                    message: "Enter a valid AWS region name",
-                                                    preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alertController.addAction(okAction)
-
-            self.present(alertController, animated: true, completion: nil)
-            return
-        }
-        if (self.clientID.text!.isEmpty) {
-            self.localSenderId = NSUUID().uuidString.lowercased()
-            print("Generated clientID is \(self.localSenderId)")
-        }
+        self.localSenderId = NSUUID().uuidString.lowercased()
+        
         // Kinesis Video Client Configuration
         let configuration = AWSServiceConfiguration(region: self.awsRegionType, credentialsProvider: AWSMobileClient.default())
         AWSKinesisVideo.register(with: configuration!, forKey: awsKinesisVideoKey)
@@ -150,7 +132,7 @@ class ChannelConfigurationViewController: UIViewController, UITextFieldDelegate 
             RTCIceServersList.append(RTCIceServer.init(urlStrings: iceServers.uris!, username: iceServers.username, credential: iceServers.password))
         }
 
-        RTCIceServersList.append(RTCIceServer.init(urlStrings: ["stun:stun.kinesisvideo." + self.regionName.text! + ".amazonaws.com:443"]))
+        RTCIceServersList.append(RTCIceServer.init(urlStrings: ["stun:stun.kinesisvideo.us-west-2.amazonaws.com:443"]))
         webRTCClient = WebRTCClient(iceServers: RTCIceServersList, isAudioOn: sendAudioEnabled)
         webRTCClient!.delegate = self
 
@@ -159,23 +141,15 @@ class ChannelConfigurationViewController: UIViewController, UITextFieldDelegate 
         signalingClient!.delegate = self
         signalingClient!.connect()
 
-        let seconds = 2.0
+        let seconds = 0.1
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            self.updateConnectionLabel()
             self.vc = VideoViewController(webRTCClient: self.webRTCClient!, signalingClient: self.signalingClient!, localSenderClientID: self.localSenderId, isMaster: self.isMaster!)
+            self.vc?.modalPresentationStyle = .fullScreen
             self.present(self.vc!, animated: true, completion: nil)
         }
     }
 
-    func updateConnectionLabel() {
-        if signalingConnected {
-            connectedLabel!.text = "Connected"
-            connectedLabel!.textColor = .green
-        } else {
-            connectedLabel!.text = "Not Connected"
-            connectedLabel!.textColor = .red
-        }
-    }
+    
 
     func createChannel(channelName: String) {
         let kvsClient = AWSKinesisVideo(forKey: awsKinesisVideoKey)

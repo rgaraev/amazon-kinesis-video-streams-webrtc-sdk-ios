@@ -16,9 +16,9 @@ class WorkoutTableViewCell: UITableViewCell {
     @IBOutlet weak var videoPlayerContainer: UIView!
     
     
-    func prepare() {
+    func prepare(link: String) {
         if (videoPlayer == nil) {
-            let url = URL(string: "https://www.youtube.com/watch?v=FgzjxOnWYvA")!
+            let url = URL(string: link)!
             let asset = AVAsset(url: url)
             let playerItem = AVPlayerItem(asset: asset)
             videoPlayer =  AVPlayer(playerItem: playerItem)
