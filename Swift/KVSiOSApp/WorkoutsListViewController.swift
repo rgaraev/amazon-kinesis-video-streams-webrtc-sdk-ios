@@ -65,13 +65,13 @@ class WorkoutsListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell =  tableView.dequeueReusableCell(withIdentifier: "WorkoutTableViewCell", for: indexPath)
-        cell.textLabel?.text = fakeData[indexPath.row][0]
+        let cell: WorkoutTableViewCell =  tableView.dequeueReusableCell(withIdentifier: "WorkoutTableViewCell", for: indexPath) as! WorkoutTableViewCell
+        cell.titleLabel?.text = fakeData[indexPath.row][0]
         return cell;
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
+        return 220.0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -81,6 +81,38 @@ class WorkoutsListViewController: UITableViewController {
             
         }
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//       var result:String? = nil
+//
+//       if let theURL = URL(string: fakeData[indexPath.row][1]) {
+//           if theURL.host == "youtu.be" {
+//               result = theURL.pathComponents[1]
+//           } else if theURL.absoluteString.contains("www.youtube.com/embed") {
+//               result = theURL.pathComponents[2]
+//           } else if theURL.host == "youtube.googleapis.com" ||
+//               theURL.pathComponents.first == "www.youtube.com" {
+//               result = theURL.pathComponents[2]
+//           }
+//       }
+//        let urlString = "http://img.youtube.com/vi/\(result!)/3.jpg"
+        let videoID = fakeData[indexPath.row][1].components(separatedBy: "/").last
+        print(videoID)
+        let urlString = "http://img.youtube.com/vi/\(videoID!)/0.jpg"
+        if let imgURL = URL(string: urlString) {
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: imgURL) {
+                    if let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            (cell as! WorkoutTableViewCell).img.image = image
+                        }
+                    }
+                }
+            }
+        }
+//        (cell as! WorkoutTableViewCell).imageURL = imgURL
+    }
+
     
     
 }

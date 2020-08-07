@@ -50,27 +50,58 @@
         <scene sceneID="eAf-1g-Izu">
             <objects>
                 <tableViewController id="p0x-gM-Nc5" customClass="WorkoutsListViewController" customModule="AWSKinesisVideoWebRTCDemoAppUITests" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="62u-oR-ql3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="62u-oR-ql3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" textLabel="hAH-kX-9GV" rowHeight="72" style="IBUITableViewCellStyleDefault" id="b0X-Zl-dZJ" customClass="WorkoutTableViewCell" customModule="AWSKinesisVideoWebRTCDemoAppUITests" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="72"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="146" id="b0X-Zl-dZJ" customClass="WorkoutTableViewCell" customModule="AWSKinesisVideoWebRTCDemoAppUITests" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="146"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b0X-Zl-dZJ" id="q9b-l1-CKy">
-                                    <rect key="frame" x="0.0" y="0.0" width="348" height="72"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAH-kX-9GV">
-                                            <rect key="frame" x="16" y="0.0" width="324" height="72"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwW-nf-SkU" userLabel="Container View">
+                                            <rect key="frame" x="11" y="10" width="354" height="126"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEb-HN-D6K">
+                                                    <rect key="frame" x="8" y="97" width="335" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UvJ-QC-Vh7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="87"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="BEb-HN-D6K" secondAttribute="trailing" constant="11" id="0FY-Aj-0uY"/>
+                                                <constraint firstItem="UvJ-QC-Vh7" firstAttribute="top" secondItem="PwW-nf-SkU" secondAttribute="top" id="14Y-UP-7Xe"/>
+                                                <constraint firstItem="BEb-HN-D6K" firstAttribute="bottom" secondItem="PwW-nf-SkU" secondAttribute="bottomMargin" id="A4y-bd-h3I"/>
+                                                <constraint firstItem="BEb-HN-D6K" firstAttribute="top" secondItem="UvJ-QC-Vh7" secondAttribute="bottom" constant="10" id="NVg-EN-XqN"/>
+                                                <constraint firstAttribute="trailing" secondItem="UvJ-QC-Vh7" secondAttribute="trailing" id="lhR-SG-dN5"/>
+                                                <constraint firstItem="UvJ-QC-Vh7" firstAttribute="leading" secondItem="PwW-nf-SkU" secondAttribute="leading" id="rb5-7E-swb"/>
+                                                <constraint firstItem="BEb-HN-D6K" firstAttribute="leading" secondItem="PwW-nf-SkU" secondAttribute="leadingMargin" id="tM8-kj-q19"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="PwW-nf-SkU" secondAttribute="bottom" constant="10" id="3A7-HS-Bwu"/>
+                                        <constraint firstItem="PwW-nf-SkU" firstAttribute="top" secondItem="q9b-l1-CKy" secondAttribute="topMargin" constant="-1" id="KxP-R3-D4z"/>
+                                        <constraint firstAttribute="trailing" secondItem="PwW-nf-SkU" secondAttribute="trailing" constant="10" id="OJM-Eq-a1l"/>
+                                        <constraint firstItem="PwW-nf-SkU" firstAttribute="leading" secondItem="q9b-l1-CKy" secondAttribute="leadingMargin" constant="-5" id="rjC-iM-khJ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="containerView" destination="PwW-nf-SkU" id="F9a-0F-3Cy"/>
+                                    <outlet property="img" destination="UvJ-QC-Vh7" id="WYQ-hf-1HZ"/>
+                                    <outlet property="titleLabel" destination="BEb-HN-D6K" id="yNG-eh-pAQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -85,7 +116,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLv-ch-TVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2463.1999999999998" y="1123.9880059970017"/>
+            <point key="canvasLocation" x="-2464.8000000000002" y="1123.088455772114"/>
         </scene>
         <!--Workout Player View Controller-->
         <scene sceneID="sZL-Sc-IXq">

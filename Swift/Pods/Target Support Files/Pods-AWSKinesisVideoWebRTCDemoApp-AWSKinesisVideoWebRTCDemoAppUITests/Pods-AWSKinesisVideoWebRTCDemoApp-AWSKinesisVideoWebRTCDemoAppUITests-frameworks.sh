@@ -207,6 +207,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework"
   install_framework "${PODS_ROOT}/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/URLImage/URLImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YoutubeDirectLinkExtractor/YoutubeDirectLinkExtractor.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -220,6 +221,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework"
   install_framework "${PODS_ROOT}/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/URLImage/URLImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YoutubeDirectLinkExtractor/YoutubeDirectLinkExtractor.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

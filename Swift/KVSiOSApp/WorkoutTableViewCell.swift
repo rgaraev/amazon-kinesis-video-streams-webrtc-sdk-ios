@@ -7,31 +7,30 @@
 
 import Foundation
 import UIKit
-import AVKit
+
 
 class WorkoutTableViewCell: UITableViewCell {
     
-    var videoPlayer: AVPlayer!
+    @IBOutlet weak var img: UIImageView!
     
-    @IBOutlet weak var videoPlayerContainer: UIView!
-    
-    
-    func prepare(link: String) {
-        if (videoPlayer == nil) {
-            let url = URL(string: link)!
-            let asset = AVAsset(url: url)
-            let playerItem = AVPlayerItem(asset: asset)
-            videoPlayer =  AVPlayer(playerItem: playerItem)
-            let playerLayer = AVPlayerLayer(player: videoPlayer)
-            playerLayer.frame = videoPlayerContainer.bounds //bounds of the view in which AVPlayer should be displayed
-            print(videoPlayerContainer.bounds)
-            playerLayer.videoGravity = .resizeAspect
-            videoPlayerContainer.layer.addSublayer(playerLayer)
-            videoPlayer.play()
+    @IBOutlet weak var titleLabel: UILabel!
+
+    @IBOutlet weak var containerView: UIView! {
+        didSet {
+            // Make it card-like
+            containerView.layer.cornerRadius = 10
+            containerView.layer.shadowOpacity = 1
+            containerView.layer.shadowRadius = 2
+            containerView.layer.shadowColor = UIColor.black.cgColor
+            containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
+            containerView.layer.masksToBounds = true
         }
     }
     
     
-    
+    func updateImage(url: URL) {
+        
+    }
+   
 }
  

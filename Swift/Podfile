@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'AWSKinesisVideoWebRTCDemoApp' do
   pod 'YoutubeDirectLinkExtractor'
+  pod 'URLImage'
   pod 'AWSCognitoIdentityProvider'
   pod 'AWSMobileClient'
   pod 'CommonCryptoModule'
