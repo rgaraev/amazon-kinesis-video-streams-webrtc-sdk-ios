@@ -76,7 +76,11 @@
 		C508429424D92C0B007A58E8 /* WorkoutPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C508429324D92C0A007A58E8 /* WorkoutPlayerViewController.swift */; };
 		C541E6B424E0598E00D3CCE6 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541E6B324E0598E00D3CCE6 /* WorkoutCell.swift */; };
 		C579992C24E2862B00F820AE /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C579992B24E2862B00F820AE /* WorkoutsViewController.swift */; };
-		C5A54B0124E04A9E007E666D /* WorkoutGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54B0024E04A9E007E666D /* WorkoutGroup.swift */; };
+		C57DF1D524E43C13007CFDEB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C57DF1D424E43C12007CFDEB /* logo.png */; };
+		C5F6B26924E3D31B00C788F6 /* ProgramHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F6B26824E3D31B00C788F6 /* ProgramHeaderView.xib */; };
+		C5F6B26B24E3D54500C788F6 /* ProgramHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F6B26A24E3D54500C788F6 /* ProgramHeaderView.swift */; };
+		C5F6B26D24E3FF4A00C788F6 /* Exercises_tab_images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F6B26C24E3FF4A00C788F6 /* Exercises_tab_images.xcassets */; };
+		C5F6B26F24E4001E00C788F6 /* DataStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F6B26E24E4001E00C788F6 /* DataStructs.swift */; };
 		D650594124D457C600F97BC8 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650594024D457C600F97BC8 /* AccountViewController.swift */; };
 		D650594324D45AF300F97BC8 /* EmailSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650594224D45AF300F97BC8 /* EmailSettingsViewController.swift */; };
 		D66A00F924D2A14B000853A9 /* ProgramsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00F824D2A14B000853A9 /* ProgramsTableViewCell.swift */; };
@@ -170,8 +174,12 @@
 		C508429324D92C0A007A58E8 /* WorkoutPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlayerViewController.swift; sourceTree = "<group>"; };
 		C541E6B324E0598E00D3CCE6 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		C579992B24E2862B00F820AE /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
-		C5A54B0024E04A9E007E666D /* WorkoutGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutGroup.swift; sourceTree = "<group>"; };
+		C57DF1D424E43C12007CFDEB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Images.xcassets/AppIcon.appiconset/logo.png; sourceTree = "<group>"; };
 		C5C7759E24DC009A00A46EC5 /* Condor.Health.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Condor.Health.entitlements; sourceTree = "<group>"; };
+		C5F6B26824E3D31B00C788F6 /* ProgramHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramHeaderView.xib; sourceTree = "<group>"; };
+		C5F6B26A24E3D54500C788F6 /* ProgramHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramHeaderView.swift; sourceTree = "<group>"; };
+		C5F6B26C24E3FF4A00C788F6 /* Exercises_tab_images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Exercises_tab_images.xcassets; sourceTree = "<group>"; };
+		C5F6B26E24E4001E00C788F6 /* DataStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructs.swift; sourceTree = "<group>"; };
 		D650594024D457C600F97BC8 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D650594224D45AF300F97BC8 /* EmailSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettingsViewController.swift; sourceTree = "<group>"; };
 		D66A00F824D2A14B000853A9 /* ProgramsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsTableViewCell.swift; sourceTree = "<group>"; };
@@ -240,6 +248,7 @@
 		17FC2F7E1E258FC500174015 /* KVSiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				C57DF1D424E43C12007CFDEB /* logo.png */,
 				C5A54AFD24E04779007E666D /* Exercises */,
 				9510D70324CF253D00E447C3 /* Images.xcassets */,
 				709A549823624DED0039332B /* VideoViewController.xib */,
@@ -340,9 +349,12 @@
 				C508429324D92C0A007A58E8 /* WorkoutPlayerViewController.swift */,
 				95BB3EA324D1C72C00A79A8D /* ProgramsListViewController.swift */,
 				D66A00F824D2A14B000853A9 /* ProgramsTableViewCell.swift */,
-				C5A54B0024E04A9E007E666D /* WorkoutGroup.swift */,
 				C541E6B324E0598E00D3CCE6 /* WorkoutCell.swift */,
 				C579992B24E2862B00F820AE /* WorkoutsViewController.swift */,
+				C5F6B26824E3D31B00C788F6 /* ProgramHeaderView.xib */,
+				C5F6B26A24E3D54500C788F6 /* ProgramHeaderView.swift */,
+				C5F6B26C24E3FF4A00C788F6 /* Exercises_tab_images.xcassets */,
+				C5F6B26E24E4001E00C788F6 /* DataStructs.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -462,10 +474,13 @@
 			files = (
 				700199A8234FD06F00CFC1D0 /* Main.storyboard in Resources */,
 				708DC16E23550D4D00D7B98F /* LaunchScreen.storyboard in Resources */,
+				C5F6B26D24E3FF4A00C788F6 /* Exercises_tab_images.xcassets in Resources */,
+				C5F6B26924E3D31B00C788F6 /* ProgramHeaderView.xib in Resources */,
 				9510D70424CF253E00E447C3 /* Images.xcassets in Resources */,
 				70685CD2234FED1800D0562F /* awsconfiguration.json in Resources */,
 				708FE977234CFBF800AD81DC /* kinesisLogo.png in Resources */,
 				709A549923624DED0039332B /* VideoViewController.xib in Resources */,
+				C57DF1D524E43C13007CFDEB /* logo.png in Resources */,
 				17FC2F951E2590D800174015 /* MFAViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,9 +638,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				17FC2FA31E25A5D000174015 /* ConfirmForgotPasswordViewController.swift in Sources */,
-				C5A54B0124E04A9E007E666D /* WorkoutGroup.swift in Sources */,
 				C508429424D92C0B007A58E8 /* WorkoutPlayerViewController.swift in Sources */,
 				70685CD0234FD66900D0562F /* ChannelConfigurationViewController.swift in Sources */,
+				C5F6B26B24E3D54500C788F6 /* ProgramHeaderView.swift in Sources */,
 				70B6B7E6235654BD006F9118 /* KVSSigner.swift in Sources */,
 				C541E6B424E0598E00D3CCE6 /* WorkoutCell.swift in Sources */,
 				D66A00F924D2A14B000853A9 /* ProgramsTableViewCell.swift in Sources */,
@@ -639,6 +654,7 @@
 				70BE4670235F800B00322E33 /* SignalingClient.swift in Sources */,
 				17FC2F9B1E259E0500174015 /* Constants.swift in Sources */,
 				70BE46732360E58600322E33 /* VideoViewController.swift in Sources */,
+				C5F6B26F24E4001E00C788F6 /* DataStructs.swift in Sources */,
 				17FC2F991E25940900174015 /* SignInViewController.swift in Sources */,
 				D650594324D45AF300F97BC8 /* EmailSettingsViewController.swift in Sources */,
 				95BB3EA424D1C72C00A79A8D /* ProgramsListViewController.swift in Sources */,

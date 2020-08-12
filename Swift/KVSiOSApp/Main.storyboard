@@ -79,10 +79,14 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWs-7g-73R">
-                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="106"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="90"/>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             </imageView>
+                                                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="sZj-Gj-N7U">
+                                                                <rect key="frame" x="-9" y="-9.5" width="20" height="20"/>
+                                                            </activityIndicatorView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCP-ew-qiU">
-                                                                <rect key="frame" x="3" y="108" width="122" height="18"/>
+                                                                <rect key="frame" x="3" y="92" width="122" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="iRV-ol-ttt"/>
                                                                 </constraints>
@@ -99,12 +103,15 @@
                                                             <constraint firstItem="HWs-7g-73R" firstAttribute="leading" secondItem="1DR-mu-0TV" secondAttribute="leading" id="WDd-Rw-aH2"/>
                                                             <constraint firstAttribute="trailing" secondItem="HWs-7g-73R" secondAttribute="trailing" id="ZIf-9W-HpF"/>
                                                             <constraint firstItem="HWs-7g-73R" firstAttribute="top" secondItem="1DR-mu-0TV" secondAttribute="top" id="bqx-bg-Ty7"/>
+                                                            <constraint firstItem="sZj-Gj-N7U" firstAttribute="centerY" secondItem="1DR-mu-0TV" secondAttribute="centerY" constant="-15" id="cep-B7-58M"/>
                                                             <constraint firstItem="XCP-ew-qiU" firstAttribute="top" secondItem="HWs-7g-73R" secondAttribute="bottom" constant="2" id="efL-nb-JK3"/>
+                                                            <constraint firstItem="sZj-Gj-N7U" firstAttribute="centerX" secondItem="1DR-mu-0TV" secondAttribute="centerX" id="l5P-gh-lir"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <connections>
                                                         <outlet property="img" destination="HWs-7g-73R" id="Wco-jv-E7u"/>
+                                                        <outlet property="indicator" destination="sZj-Gj-N7U" id="xW2-rF-9QE"/>
                                                         <outlet property="name" destination="XCP-ew-qiU" id="0S9-7K-5mH"/>
                                                     </connections>
                                                 </collectionViewCell>
@@ -177,7 +184,7 @@
                     <tabBarItem key="tabBarItem" title="Messenger" image="messenger_tab_icon" id="Yfd-AK-szm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0b4-Wk-FS7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -535,7 +542,7 @@
                 <navigationController id="rmy-nG-EJs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="account_tab_icon" id="jMy-OG-PuS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yGT-KS-y3b">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -553,7 +560,7 @@
                     <tabBarItem key="tabBarItem" title="Exercises" image="workouts_tab_icon" id="ZYW-gL-BXO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wVb-Jh-oJs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
