@@ -72,11 +72,14 @@
 		70BE46732360E58600322E33 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE46722360E58600322E33 /* VideoViewController.swift */; };
 		70BE46752360FC2F00322E33 /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE46742360FC2F00322E33 /* WebRTCClient.swift */; };
 		9510D70424CF253E00E447C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9510D70324CF253D00E447C3 /* Images.xcassets */; };
-		95BB3EA424D1C72C00A79A8D /* WorkoutsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB3EA324D1C72C00A79A8D /* WorkoutsListViewController.swift */; };
+		95BB3EA424D1C72C00A79A8D /* ProgramsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB3EA324D1C72C00A79A8D /* ProgramsListViewController.swift */; };
 		C508429424D92C0B007A58E8 /* WorkoutPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C508429324D92C0A007A58E8 /* WorkoutPlayerViewController.swift */; };
+		C541E6B424E0598E00D3CCE6 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541E6B324E0598E00D3CCE6 /* WorkoutCell.swift */; };
+		C579992C24E2862B00F820AE /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C579992B24E2862B00F820AE /* WorkoutsViewController.swift */; };
+		C5A54B0124E04A9E007E666D /* WorkoutGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A54B0024E04A9E007E666D /* WorkoutGroup.swift */; };
 		D650594124D457C600F97BC8 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650594024D457C600F97BC8 /* AccountViewController.swift */; };
 		D650594324D45AF300F97BC8 /* EmailSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650594224D45AF300F97BC8 /* EmailSettingsViewController.swift */; };
-		D66A00F924D2A14B000853A9 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00F824D2A14B000853A9 /* WorkoutTableViewCell.swift */; };
+		D66A00F924D2A14B000853A9 /* ProgramsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00F824D2A14B000853A9 /* ProgramsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,14 +164,17 @@
 		70FAD51523983822002A50E6 /* AWSKinesisVideoWebRTCDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSKinesisVideoWebRTCDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FAD51923983822002A50E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9510D70324CF253D00E447C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		95BB3EA324D1C72C00A79A8D /* WorkoutsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsListViewController.swift; sourceTree = "<group>"; };
+		95BB3EA324D1C72C00A79A8D /* ProgramsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsListViewController.swift; sourceTree = "<group>"; };
 		B2AAC0ECA6F6883462E20EB2 /* Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests/Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BCD3582AF09F7DF8A32F3158 /* Pods_AWSKinesisVideoWebRTCDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSKinesisVideoWebRTCDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C508429324D92C0A007A58E8 /* WorkoutPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlayerViewController.swift; sourceTree = "<group>"; };
+		C541E6B324E0598E00D3CCE6 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		C579992B24E2862B00F820AE /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
+		C5A54B0024E04A9E007E666D /* WorkoutGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutGroup.swift; sourceTree = "<group>"; };
 		C5C7759E24DC009A00A46EC5 /* Condor.Health.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Condor.Health.entitlements; sourceTree = "<group>"; };
 		D650594024D457C600F97BC8 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D650594224D45AF300F97BC8 /* EmailSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSettingsViewController.swift; sourceTree = "<group>"; };
-		D66A00F824D2A14B000853A9 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		D66A00F824D2A14B000853A9 /* ProgramsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsTableViewCell.swift; sourceTree = "<group>"; };
 		F63D8021C88713E1A22AC928 /* Pods-AWSKinesisVideoWebRTCDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSKinesisVideoWebRTCDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-AWSKinesisVideoWebRTCDemoApp/Pods-AWSKinesisVideoWebRTCDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +240,7 @@
 		17FC2F7E1E258FC500174015 /* KVSiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				C5A54AFD24E04779007E666D /* Exercises */,
 				9510D70324CF253D00E447C3 /* Images.xcassets */,
 				709A549823624DED0039332B /* VideoViewController.xib */,
 				70BE466E235F800B00322E33 /* Event.swift */,
@@ -256,11 +263,8 @@
 				17FC2FA01E25A25900174015 /* ForgotPasswordViewController.swift */,
 				17FC2FA21E25A5D000174015 /* ConfirmForgotPasswordViewController.swift */,
 				70B6B7E5235654BD006F9118 /* KVSSigner.swift */,
-				95BB3EA324D1C72C00A79A8D /* WorkoutsListViewController.swift */,
-				D66A00F824D2A14B000853A9 /* WorkoutTableViewCell.swift */,
 				D650594024D457C600F97BC8 /* AccountViewController.swift */,
 				D650594224D45AF300F97BC8 /* EmailSettingsViewController.swift */,
-				C508429324D92C0A007A58E8 /* WorkoutPlayerViewController.swift */,
 			);
 			path = KVSiOSApp;
 			sourceTree = "<group>";
@@ -328,6 +332,19 @@
 				B2AAC0ECA6F6883462E20EB2 /* Pods-AWSKinesisVideoWebRTCDemoApp-AWSKinesisVideoWebRTCDemoAppUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C5A54AFD24E04779007E666D /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				C508429324D92C0A007A58E8 /* WorkoutPlayerViewController.swift */,
+				95BB3EA324D1C72C00A79A8D /* ProgramsListViewController.swift */,
+				D66A00F824D2A14B000853A9 /* ProgramsTableViewCell.swift */,
+				C5A54B0024E04A9E007E666D /* WorkoutGroup.swift */,
+				C541E6B324E0598E00D3CCE6 /* WorkoutCell.swift */,
+				C579992B24E2862B00F820AE /* WorkoutsViewController.swift */,
+			);
+			path = Exercises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -606,22 +623,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				17FC2FA31E25A5D000174015 /* ConfirmForgotPasswordViewController.swift in Sources */,
+				C5A54B0124E04A9E007E666D /* WorkoutGroup.swift in Sources */,
 				C508429424D92C0B007A58E8 /* WorkoutPlayerViewController.swift in Sources */,
 				70685CD0234FD66900D0562F /* ChannelConfigurationViewController.swift in Sources */,
 				70B6B7E6235654BD006F9118 /* KVSSigner.swift in Sources */,
-				D66A00F924D2A14B000853A9 /* WorkoutTableViewCell.swift in Sources */,
+				C541E6B424E0598E00D3CCE6 /* WorkoutCell.swift in Sources */,
+				D66A00F924D2A14B000853A9 /* ProgramsTableViewCell.swift in Sources */,
 				70BE4671235F800B00322E33 /* Event.swift in Sources */,
 				17FC2FA11E25A25900174015 /* ForgotPasswordViewController.swift in Sources */,
 				17FC2F9D1E259E5D00174015 /* SignUpViewController.swift in Sources */,
 				70BE46752360FC2F00322E33 /* WebRTCClient.swift in Sources */,
 				D650594124D457C600F97BC8 /* AccountViewController.swift in Sources */,
+				C579992C24E2862B00F820AE /* WorkoutsViewController.swift in Sources */,
 				17FC2F9F1E259F3200174015 /* ConfirmSignUpViewController.swift in Sources */,
 				70BE4670235F800B00322E33 /* SignalingClient.swift in Sources */,
 				17FC2F9B1E259E0500174015 /* Constants.swift in Sources */,
 				70BE46732360E58600322E33 /* VideoViewController.swift in Sources */,
 				17FC2F991E25940900174015 /* SignInViewController.swift in Sources */,
 				D650594324D45AF300F97BC8 /* EmailSettingsViewController.swift in Sources */,
-				95BB3EA424D1C72C00A79A8D /* WorkoutsListViewController.swift in Sources */,
+				95BB3EA424D1C72C00A79A8D /* ProgramsListViewController.swift in Sources */,
 				70BE466F235F800B00322E33 /* Message.swift in Sources */,
 				17FC2F801E258FC500174015 /* AppDelegate.swift in Sources */,
 			);
@@ -814,7 +834,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Condor.Health.entitlements;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 64;
 				DEVELOPMENT_TEAM = 4PNWMMZ23N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -884,7 +904,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Condor.Health.entitlements;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 64;
 				DEVELOPMENT_TEAM = 4PNWMMZ23N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

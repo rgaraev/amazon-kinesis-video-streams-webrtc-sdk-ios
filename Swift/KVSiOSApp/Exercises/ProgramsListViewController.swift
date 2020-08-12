@@ -10,7 +10,8 @@ import UIKit
 
 
 
-class WorkoutsListViewController: UITableViewController {
+class ProgramsListViewController: UITableViewController {
+
     
     let fakeData: Array<Array<String>> = [
         ["Crumbling a Piece of Paper","https://youtu.be/XLVtWTjyixk"],
@@ -56,61 +57,68 @@ class WorkoutsListViewController: UITableViewController {
         ["Supine Shoulder Flexion AROM. Advanced","https://youtu.be/dyokMYtv8Go"]
     ]
     
+    var workoutsViewControllers : Array<WorkoutsViewController> = []
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let vc = WorkoutsViewController()
+        vc.parentVC = self
+        self.workoutsViewControllers.append(vc)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fakeData.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: WorkoutTableViewCell =  tableView.dequeueReusableCell(withIdentifier: "WorkoutTableViewCell", for: indexPath) as! WorkoutTableViewCell
-        cell.titleLabel?.text = fakeData[indexPath.row][0]
+        let cell: ProgramsTableViewCell =  tableView.dequeueReusableCell(withIdentifier: "WorkoutGroupCell", for: indexPath) as! ProgramsTableViewCell
+        cell.configure(collectionViewController: self.workoutsViewControllers[0] as WorkoutsViewController)
+//        cell.titleLabel?.text = fakeData[indexPath.row][0]
         return cell;
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220.0
+        return 150.0
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let playerVC = WorkoutPlayerViewController()
-        playerVC.link = fakeData[indexPath.row][1]
-        self.present(playerVC, animated: true) {
-            
-        }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Trunk"
     }
+    
+    
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let playerVC = WorkoutPlayerViewController()
+//        playerVC.link = fakeData[indexPath.row][1]
+//        self.present(playerVC, animated: true) {
+//
+//        }
+//    }
+    
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        let videoID = fakeData[indexPath.row][1].components(separatedBy: "/").last
+//        print(videoID)
+//        let urlString = "http://img.youtube.com/vi/\(videoID!)/0.jpg"
+//        if let imgURL = URL(string: urlString) {
+//            DispatchQueue.global().async {
+//                if let data = try? Data(contentsOf: imgURL) {
+//                    if let image = UIImage(data: data) {
+//                        DispatchQueue.main.async {
+//                            (cell as! WorkoutTableViewCell).img.image = image
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//       var result:String? = nil
-//
-//       if let theURL = URL(string: fakeData[indexPath.row][1]) {
-//           if theURL.host == "youtu.be" {
-//               result = theURL.pathComponents[1]
-//           } else if theURL.absoluteString.contains("www.youtube.com/embed") {
-//               result = theURL.pathComponents[2]
-//           } else if theURL.host == "youtube.googleapis.com" ||
-//               theURL.pathComponents.first == "www.youtube.com" {
-//               result = theURL.pathComponents[2]
-//           }
-//       }
-//        let urlString = "http://img.youtube.com/vi/\(result!)/3.jpg"
-        let videoID = fakeData[indexPath.row][1].components(separatedBy: "/").last
-        print(videoID)
-        let urlString = "http://img.youtube.com/vi/\(videoID!)/0.jpg"
-        if let imgURL = URL(string: urlString) {
-            DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: imgURL) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            (cell as! WorkoutTableViewCell).img.image = image
-                        }
-                    }
-                }
-            }
-        }
-//        (cell as! WorkoutTableViewCell).imageURL = imgURL
+        
     }
 
     

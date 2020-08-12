@@ -19,12 +19,12 @@ class WorkoutPlayerViewController: AVPlayerViewController {
         super.viewDidAppear(animated)
         let y = YoutubeDirectLinkExtractor()
         y.extractInfo(for: .urlString(link!), success: { info in
-            print(info.rawInfo)
+//            print(info.rawInfo)
             let uri = URL(string: info.lowestQualityPlayableLink!)
-//            DispatchQueue.main.async {
-//                self.player = AVPlayer(url: uri!)
-//                self.player?.play()
-//            }
+            DispatchQueue.main.async {
+                self.player = AVPlayer(url: uri!)
+                self.player?.play()
+            }
             }
         ) { error in
             print(error)

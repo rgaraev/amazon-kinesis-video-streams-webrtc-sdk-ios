@@ -16,7 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let scheme = url.scheme,
+            scheme.localizedCaseInsensitiveCompare("health.condor") == .orderedSame,
+            let view = url.host {
+            
+            var parameters: [String: String] = [:]
+            URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.forEach {
+                parameters[$0.name] = $0.value
+            }
+            
+        }
+        return true
+    }
 
     var orientationLock = UIInterfaceOrientationMask.portrait
 
