@@ -40,7 +40,6 @@
                         <segue destination="dJZ-sn-Ti4" kind="relationship" relationship="viewControllers" id="bSC-hb-hrZ"/>
                         <segue destination="5RH-t2-SkA" kind="relationship" relationship="viewControllers" id="YJo-ol-Ogl"/>
                         <segue destination="SfA-Z0-41u" kind="relationship" relationship="viewControllers" id="fPC-69-Cva"/>
-                        <segue destination="rmy-nG-EJs" kind="relationship" relationship="viewControllers" id="s9K-dw-SBZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiI-j2-WJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,7 +207,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMq-bs-4Hv">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMq-bs-4Hv">
                                 <rect key="frame" x="66" y="203" width="188" height="25"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.60392156860000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="connectasviewerbutton"/>
@@ -223,11 +222,24 @@
                                     <action selector="connectAsViewerWith_sender:" destination="fxY-gB-7Yj" eventType="touchUpInside" id="qMr-Sc-Op3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparing the call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE0-NU-T3Z">
+                                <rect key="frame" x="93" y="175" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yzZ-7j-fqZ">
+                                <rect key="frame" x="150" y="124" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GE0-NU-T3Z" firstAttribute="centerY" secondItem="PaL-Mo-bUW" secondAttribute="centerY" constant="-30" id="2by-Y2-HM9"/>
+                            <constraint firstItem="yzZ-7j-fqZ" firstAttribute="centerX" secondItem="PaL-Mo-bUW" secondAttribute="centerX" id="6fK-ug-fQ3"/>
+                            <constraint firstItem="GE0-NU-T3Z" firstAttribute="centerX" secondItem="PaL-Mo-bUW" secondAttribute="centerX" id="SyH-oG-T1d"/>
                             <constraint firstItem="KMq-bs-4Hv" firstAttribute="leading" secondItem="PaL-Mo-bUW" secondAttribute="leadingMargin" constant="50" id="s6F-HH-LwY"/>
                             <constraint firstItem="KMq-bs-4Hv" firstAttribute="centerY" secondItem="PaL-Mo-bUW" secondAttribute="centerY" id="tkR-uK-4Tq"/>
+                            <constraint firstItem="GE0-NU-T3Z" firstAttribute="top" secondItem="yzZ-7j-fqZ" secondAttribute="bottom" constant="31" id="vLc-NM-8pZ"/>
                             <constraint firstItem="KMq-bs-4Hv" firstAttribute="centerX" secondItem="PaL-Mo-bUW" secondAttribute="centerX" id="zBe-cn-OKS"/>
                         </constraints>
                     </view>
@@ -236,6 +248,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="connectAsViewerButton" destination="KMq-bs-4Hv" id="HDg-vF-0CB"/>
+                        <outlet property="preparingIndicator" destination="yzZ-7j-fqZ" id="5Dp-vY-Nae"/>
+                        <outlet property="preparingLabel" destination="GE0-NU-T3Z" id="WGI-jH-lTR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NB-jG-Ywn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -307,7 +321,7 @@
             <objects>
                 <tableViewController id="I8H-n5-b0E" customClass="AccountViewController" customModule="AWSKinesisVideoWebRTCDemoAppUITests" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hDZ-gH-Pcz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -457,11 +471,11 @@
                         <viewControllerLayoutGuide type="bottom" id="y0j-6L-MGu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xD7-Pc-Lo2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask your doctor to send you an invite link via &quot;Condor AI&quot;" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fK-aa-27C">
-                                <rect key="frame" x="16" y="195" width="288" height="41"/>
+                                <rect key="frame" x="16" y="219.5" width="288" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -490,24 +504,24 @@
                         <viewControllerLayoutGuide type="bottom" id="jCf-t4-mOA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6TO-Ap-V9C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email if you want to backup your data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um2-UK-TpG">
-                                <rect key="frame" x="20" y="91" width="280" height="41"/>
+                                <rect key="frame" x="20" y="97" width="280" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kub-HD-pKi">
-                                <rect key="frame" x="143" y="286" width="34" height="30"/>
+                                <rect key="frame" x="143" y="292" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveEmail" destination="FyB-t4-Mhc" eventType="touchUpInside" id="OMk-WH-UT1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cwa-au-784">
-                                <rect key="frame" x="60" y="176" width="200" height="34"/>
+                                <rect key="frame" x="60" y="182" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="avx-aB-ROq"/>
                                 </constraints>
@@ -542,7 +556,7 @@
                 <navigationController id="rmy-nG-EJs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="account_tab_icon" id="jMy-OG-PuS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yGT-KS-y3b">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -560,7 +574,7 @@
                     <tabBarItem key="tabBarItem" title="Exercises" image="workouts_tab_icon" id="ZYW-gL-BXO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wVb-Jh-oJs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

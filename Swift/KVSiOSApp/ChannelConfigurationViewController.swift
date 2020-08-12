@@ -30,6 +30,9 @@ class ChannelConfigurationViewController: UIViewController {
     }()
     @IBOutlet weak var connectAsViewerButton: UIButton!
     
+     @IBOutlet weak var preparingLabel: UILabel!
+     @IBOutlet weak var preparingIndicator: UIActivityIndicatorView!
+    
     var peerConnection: RTCPeerConnection?
 
 
@@ -42,6 +45,8 @@ class ChannelConfigurationViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.preparingLabel.isHidden = true
+        self.preparingIndicator.isHidden = true
         self.signalingConnected = false
             let serviceConfiguration = AWSServiceConfiguration(region: cognitoIdentityUserPoolRegion, credentialsProvider: nil)
 
@@ -95,6 +100,15 @@ class ChannelConfigurationViewController: UIViewController {
         } else {
             self.sendAudioEnabled = false
         }
+    }
+    
+    func connectAsViewerFromLink(_sender _: AnyObject) {
+        self.connectAsViewer(_sender: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.connectAsViewerButton.isHidden = false
+            self.preparingLabel.isHidden = true
+            self.preparingIndicator.isHidden = true
+               }
     }
 
     @IBAction func connectAsViewer(_sender _: AnyObject) {

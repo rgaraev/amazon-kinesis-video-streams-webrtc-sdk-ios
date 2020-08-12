@@ -21,12 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let scheme = url.scheme,
             scheme.localizedCaseInsensitiveCompare("health.condor") == .orderedSame,
             let view = url.host {
-            
             var parameters: [String: String] = [:]
             URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.forEach {
                 parameters[$0.name] = $0.value
             }
-            
+        }
+        
+        let tabBarController = self.window!.rootViewController as! UITabBarController;
+        tabBarController.selectedIndex = 2
+        let navigationVC = tabBarController.viewControllers![2] as! UINavigationController
+        let callVC = navigationVC.viewControllers[0] as! ChannelConfigurationViewController
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            callVC.connectAsViewerButton.isHidden = true
+            callVC.preparingLabel.isHidden = false
+            callVC.preparingIndicator.isHidden = false
+            callVC.connectAsViewerFromLink(_sender: self)
         }
         return true
     }

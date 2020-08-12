@@ -76,7 +76,7 @@
 		C508429424D92C0B007A58E8 /* WorkoutPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C508429324D92C0A007A58E8 /* WorkoutPlayerViewController.swift */; };
 		C541E6B424E0598E00D3CCE6 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541E6B324E0598E00D3CCE6 /* WorkoutCell.swift */; };
 		C579992C24E2862B00F820AE /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C579992B24E2862B00F820AE /* WorkoutsViewController.swift */; };
-		C57DF1D524E43C13007CFDEB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C57DF1D424E43C12007CFDEB /* logo.png */; };
+		C57DF1D724E46948007CFDEB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C57DF1D624E46948007CFDEB /* logo.png */; };
 		C5F6B26924E3D31B00C788F6 /* ProgramHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F6B26824E3D31B00C788F6 /* ProgramHeaderView.xib */; };
 		C5F6B26B24E3D54500C788F6 /* ProgramHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F6B26A24E3D54500C788F6 /* ProgramHeaderView.swift */; };
 		C5F6B26D24E3FF4A00C788F6 /* Exercises_tab_images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F6B26C24E3FF4A00C788F6 /* Exercises_tab_images.xcassets */; };
@@ -174,7 +174,7 @@
 		C508429324D92C0A007A58E8 /* WorkoutPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlayerViewController.swift; sourceTree = "<group>"; };
 		C541E6B324E0598E00D3CCE6 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		C579992B24E2862B00F820AE /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
-		C57DF1D424E43C12007CFDEB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Images.xcassets/AppIcon.appiconset/logo.png; sourceTree = "<group>"; };
+		C57DF1D624E46948007CFDEB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		C5C7759E24DC009A00A46EC5 /* Condor.Health.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Condor.Health.entitlements; sourceTree = "<group>"; };
 		C5F6B26824E3D31B00C788F6 /* ProgramHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramHeaderView.xib; sourceTree = "<group>"; };
 		C5F6B26A24E3D54500C788F6 /* ProgramHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramHeaderView.swift; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 		17FC2F7E1E258FC500174015 /* KVSiOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				C57DF1D424E43C12007CFDEB /* logo.png */,
+				C57DF1D624E46948007CFDEB /* logo.png */,
 				C5A54AFD24E04779007E666D /* Exercises */,
 				9510D70324CF253D00E447C3 /* Images.xcassets */,
 				709A549823624DED0039332B /* VideoViewController.xib */,
@@ -478,9 +478,9 @@
 				C5F6B26924E3D31B00C788F6 /* ProgramHeaderView.xib in Resources */,
 				9510D70424CF253E00E447C3 /* Images.xcassets in Resources */,
 				70685CD2234FED1800D0562F /* awsconfiguration.json in Resources */,
+				C57DF1D724E46948007CFDEB /* logo.png in Resources */,
 				708FE977234CFBF800AD81DC /* kinesisLogo.png in Resources */,
 				709A549923624DED0039332B /* VideoViewController.xib in Resources */,
-				C57DF1D524E43C13007CFDEB /* logo.png in Resources */,
 				17FC2F951E2590D800174015 /* MFAViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,7 +850,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Condor.Health.entitlements;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 71;
 				DEVELOPMENT_TEAM = 4PNWMMZ23N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -909,7 +909,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = health.condor.ios;
 				PRODUCT_NAME = Condor.Health;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
@@ -920,7 +920,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Condor.Health.entitlements;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 71;
 				DEVELOPMENT_TEAM = 4PNWMMZ23N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -979,7 +979,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = health.condor.ios;
 				PRODUCT_NAME = Condor.Health;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
