@@ -32,15 +32,15 @@ class ProgramsListViewController: UITableViewController {
                                                                         Exercise(name: "Quadruped Weight Shifts", link: "https://youtu.be/crLv0KEUZl4"),
                                                                         Exercise(name: "Quadruped Weight Shifts. Advanced", link: "https://youtu.be/h_N2bGWm8jM")]),
                                     Program(name: "HAND", exercises: [
-                                                                        Exercise(name: "Resisted Supine Diagonal Shoulder Flexion", link: "https://youtu.be/FaR6MYsaFkg"),
-                                                                        Exercise(name: "Resisted Supine Diagonal Shoulder Flexion. Advanced", link: "https://youtu.be/knFVwN3Bsbo"),
-                                                                        Exercise(name: "Supine Elbow Flexion Extension", link: "https://youtu.be/mHYfekqLikk"),
-                                                                        Exercise(name: "Supine Elbow Flexion Extension. Advanced", link: "https://youtu.be/zdiLyheVu-o"),
-                                                                        Exercise(name: "Supine Shoulder Flexion AROM. Advanced", link: "https://youtu.be/dyokMYtv8Go")]),
-                                    Program(name: "ARM", exercises: [
                                                                     Exercise(name: "Crumbling a Piece of Paper", link: "https://youtu.be/XLVtWTjyixk"),
                                                                     Exercise(name: "Supported Reaching and Grasping", link: "https://youtu.be/b2-NvupCrJ8"),
                                                                     Exercise(name: "Supported Reaching and Grasping. Advanced", link: "https://youtu.be/i0PxZcCs0RU")]),
+                                    Program(name: "ARM", exercises: [
+                                                                                                           Exercise(name: "Resisted Supine Diagonal Shoulder Flexion", link: "https://youtu.be/FaR6MYsaFkg"),
+                                                                                                           Exercise(name: "Resisted Supine Diagonal Shoulder Flexion. Advanced", link: "https://youtu.be/knFVwN3Bsbo"),
+                                                                                                           Exercise(name: "Supine Elbow Flexion Extension", link: "https://youtu.be/mHYfekqLikk"),
+                                                                                                           Exercise(name: "Supine Elbow Flexion Extension. Advanced", link: "https://youtu.be/zdiLyheVu-o"),
+                                                                                                           Exercise(name: "Supine Shoulder Flexion AROM. Advanced", link: "https://youtu.be/dyokMYtv8Go")]),
                                     Program(name: "LEG", exercises: [
                                                                     Exercise(name: "Standing Hip Abduction", link: "https://youtu.be/_HuCnDNdZ0k"),
                                                                     Exercise(name: "Standing Hip Abduction. Advanced", link: "https://youtu.be/0kFY4CEM-GA"),
@@ -91,7 +91,7 @@ class ProgramsListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
+        return 135.0
     }
     
     

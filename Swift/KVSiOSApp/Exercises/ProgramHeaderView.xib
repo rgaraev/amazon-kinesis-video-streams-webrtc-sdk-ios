@@ -15,15 +15,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m5g-6f-abk">
-                    <rect key="frame" x="15" y="58" width="30" height="30"/>
+                    <rect key="frame" x="15" y="59" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="EpQ-1v-atf"/>
                         <constraint firstAttribute="width" constant="30" id="ILU-x7-0Fy"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUo-a1-cd4">
-                    <rect key="frame" x="65" y="62" width="446" height="26"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                    <rect key="frame" x="65" y="63" width="446" height="26"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -32,7 +32,7 @@
                 <constraint firstItem="GUo-a1-cd4" firstAttribute="bottom" secondItem="m5g-6f-abk" secondAttribute="bottom" id="Bw2-Jl-unB"/>
                 <constraint firstItem="m5g-6f-abk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="GDa-Ff-srw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GUo-a1-cd4" secondAttribute="trailing" priority="750" constant="10" id="K0S-Dl-cdb"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="m5g-6f-abk" secondAttribute="bottom" constant="1" id="XFu-fj-URJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="m5g-6f-abk" secondAttribute="bottom" id="XFu-fj-URJ"/>
                 <constraint firstItem="GUo-a1-cd4" firstAttribute="leading" secondItem="m5g-6f-abk" secondAttribute="trailing" constant="20" id="hfz-Vx-WGS"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

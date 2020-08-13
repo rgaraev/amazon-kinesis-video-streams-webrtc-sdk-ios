@@ -69,8 +69,7 @@ class ChannelConfigurationViewController: UIViewController {
             return
             }
             print("The user is \(userState.rawValue).")
-            switch userState {
-                default:
+                if userState.rawValue != "signedIn" {
                     AWSMobileClient.default().signIn(username: "garaev", password: "Aws$1garaev") { (signInResult, error) in
                         print("signInResult: ", signInResult)
                         print("error: ", error)

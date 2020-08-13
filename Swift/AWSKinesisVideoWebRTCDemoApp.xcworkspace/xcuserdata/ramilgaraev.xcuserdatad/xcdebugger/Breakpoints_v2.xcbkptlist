@@ -36,5 +36,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E692C036-AE87-424B-BEA5-4C7E8CC13891"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KVSiOSApp/ChannelConfigurationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E692C036-AE87-424B-BEA5-4C7E8CC13891 - b05512962b178236"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;AWSMobileClient.UserState&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Condor_Health.ChannelConfigurationViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Condor.Health"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramilgaraev/Documents/CondorAI/amazon-kinesis-video-streams-webrtc-sdk-ios/Swift/KVSiOSApp/ChannelConfigurationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1703">
+               </Location>
+               <Location
+                  uuid = "E692C036-AE87-424B-BEA5-4C7E8CC13891 - 6abd23afa045a74e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;AWSMobileClient.SignInResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;AWSMobileClient.UserState&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Condor_Health.ChannelConfigurationViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Condor.Health"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramilgaraev/Documents/CondorAI/amazon-kinesis-video-streams-webrtc-sdk-ios/Swift/KVSiOSApp/ChannelConfigurationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC0905AD-C591-4D7C-9F0F-D09EC47D2584"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KVSiOSApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "application(_:open:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
